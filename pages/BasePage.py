@@ -44,6 +44,7 @@ class BasePage:
             return WebDriverWait(self.driver, 10).until(EC.visibility_of_all_elements_located(by_locator))
         except:
             return []
+
     def get_title(self):
         return self.driver.title
 
