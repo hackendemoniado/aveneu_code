@@ -28,13 +28,6 @@ So I can manage my tasks
     Then Click on the My Tasks button
     Then We can not see this welcome message: "Hey Sergio, this is your todo list for today:"
 
-  Scenario: The required welcome message does not appear.
-    And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
-    And Click on the Login button
-    Then Login is successful and dashboard is opened
-    Then Click on the My Tasks button
-    Then We can not see this welcome message: "Hey Sergio, this is your todo list for today:"
-
   Scenario: The minimum of 3 characters is not respected when the task is created.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
