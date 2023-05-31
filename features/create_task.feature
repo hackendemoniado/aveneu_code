@@ -7,19 +7,19 @@ So I can manage my tasks
     When Open the https://qa-test.avenuecode.io/users/sign_in website
     Then The login portal has been opened
 
-  Scenario: It is possible to create subtasks by pressing "Enter".
+  Scenario: It is possible to create tasks by pressing Enter.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
     Then Login is successful and dashboard is opened
     Then Click on the My Tasks button
-    Then Click and write in the text_box the new Task "new task using Enter"
+    Then Click and write in the text_box the new Task and press enter "new task using Enter"
 
-  Scenario: It is possible to create subtasks clicking on the add task button.
+  Scenario: It is possible to create tasks clicking on the add task button.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
     Then Login is successful and dashboard is opened
     Then Click on the My Tasks button
-    Then Click and write in the text_box the new Task "new task using button +"
+    Then Click and write in the text_box the new Task and press Add button "new task using button +"
 
   Scenario: The required welcome message does not appear.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"

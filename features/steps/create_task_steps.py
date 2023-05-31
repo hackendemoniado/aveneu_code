@@ -93,7 +93,7 @@ def enter_on_my_task(context):
         assert False, "Test is failed when tried to enter on My Task."
 
 
-@then(u'Click and write in the text_box the new Task "{task}"')
+@then(u'Click and write in the text_box the new Task and press enter "{task}"')
 def create_new_task(context, task):
     try:
         context.mytaskpage.validate_page()
@@ -103,14 +103,14 @@ def create_new_task(context, task):
         assert False, "Test is failed when tried to enter on My Task."
 
 
-# @then(u'CIt is possible to create subtasks clicking on the add task button.')
-# def create_new_task(context, task):
-#     try:
-#         context.mytaskpage.validate_page()
-#         context.mytaskpage.create_new_task_and_send_enter(task)
-#     except:
-#         context.driver.close()
-#         assert False, "Test is failed when tried to enter on My Task."
+@then(u'Click and write in the text_box the new Task and press Add button "{task}"')
+def create_new_task(context, task):
+    try:
+        context.mytaskpage.validate_page()
+        context.mytaskpage.create_new_task_and_press_on_add_button(task)
+    except:
+        context.driver.close()
+        assert False, "Test is failed when tried to enter on My Task."
 
 
 @then(u'We can not see this welcome message: "{message}"')
