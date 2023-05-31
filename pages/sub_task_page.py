@@ -29,20 +29,16 @@ class SubTaskPage(BasePage):
             assert self.get_element_text(self.FIRST_SUB_TASK) == subtask
         else:
             self.input_element(self.INPUT_SUBTASK, subtask)
-            print("tratando de limpiar duedate")
             self.clear_input_element(self.INPUT_DUEDATE_SUBTASK)
             self.click_element(self.BTN_ADD_SUB_TASK)
             assert self.get_element_text(self.FIRST_SUB_TASK) == "empty"
         self.click_element(self.BTN_CLOSE_SUB_TASK)
 
     def check_number_of_sub_tasks(self, number_of_subtasks):
-        print(f"entrando al ultimo check: {number_of_subtasks}")
         assert len(self.get_elements(self.LIST_OF_SUB_TASKS)) == number_of_subtasks
 
     def edit_task(self, task="Edited using subtask"):
-        print("edit_task")
         self.input_element(self.INPUT_TASK, task)
-        print(f"nuevo titulo: {self.get_element_text(self.INPUT_TASK)}")
         title = self.get_element_text(self.INPUT_TASK)
         self.click_element(self.BTN_CLOSE_SUB_TASK)
         return title
