@@ -153,7 +153,6 @@ def check_number_of_sub_tasks(context, subtask, duedate):
         context.subtaskpage.validate_page()
         context.subtaskpage.create_sub_task(subtask, duedate)
         number_of_subtasks = context.mytaskpage.check_number_of_sub_tasks()
-        print(f"numeros: {number_of_subtasks}")
         context.subtaskpage.check_number_of_sub_tasks(number_of_subtasks)
 
     except:
