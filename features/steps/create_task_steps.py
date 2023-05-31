@@ -94,42 +94,42 @@ def enter_on_my_task(context):
 
 
 @then(u'Click and write in the text_box the new Task and press enter "{task}"')
-def create_new_task(context, task):
+def create_new_task_and_press_enter(context, task):
     try:
         context.mytaskpage.validate_page()
         context.mytaskpage.create_new_task_and_send_enter(task)
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried to create a new task using enter."
 
 
 @then(u'Click and write in the text_box the new Task and press Add button "{task}"')
-def create_new_task(context, task):
+def create_new_task_and_press_add_btn(context, task):
     try:
         context.mytaskpage.validate_page()
         context.mytaskpage.create_new_task_and_press_on_add_button(task)
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried to create a new task using add btn."
 
 
 @then(u'We can not see this welcome message: "{message}"')
-def create_new_task(context, message):
+def try_to_find_the_welcome_message(context, message):
     try:
         context.mytaskpage.validate_page(message)
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried to find the welcome message."
 
 
 @then(u'Click and write in the text_box the new Task "{task}" and check If appear on the top of list')
-def create_new_task(context, task):
+def create_new_task_and_check_if_appear_first(context, task):
     try:
         context.mytaskpage.validate_page()
         context.mytaskpage.create_new_task_and_send_enter(task)
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried to find the new task and appear first. "
 
 
 @then(u'Create a task If dooes not exist and after that click on Manage Subtasks.')
@@ -141,7 +141,7 @@ def enter_on_subtask(context):
         context.subtaskpage.validate_page()
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried to create a task and then click on Manage Subtasks."
 
 
 @then(u'Create a sub task after that check the number of sub task "{subtask}" "{duedate}"')
@@ -157,11 +157,11 @@ def check_number_of_sub_tasks(context, subtask, duedate):
 
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried check the number of subtasks."
 
 
 @then(u'Edit the task and check the new title "{new_title}"')
-def edit_a_task_using_sub_Task_pop_ups(context, new_title):
+def edit_a_task_using_sub_task_pop_ups(context, new_title):
     try:
         context.loginPage.enter_on_my_task()
         context.mytaskpage.validate_page()
@@ -171,7 +171,7 @@ def edit_a_task_using_sub_Task_pop_ups(context, new_title):
         context.mytaskpage.check_new_title_of_task(text)
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to enter on My Task."
+        assert False, "Test is failed when tried check if appear first the subtask."
 
 
 @then(u'Click and write in the text_box the new SubTask "{subtask}" "{duedate}"')
@@ -189,7 +189,7 @@ def create_new_subtask_with_more_than_250_characters(context, subtask="", duedat
 
 
 @then(u'Click and write in the text_box the new SubTask empty.')
-def create_new_subtask_with_more_than_250_characters(context, subtask="", duedate=""):
+def create_new_subtask_with_empty_sub_task(context, subtask="", duedate=""):
     try:
         context.loginPage.enter_on_my_task()
         context.mytaskpage.validate_page()
@@ -199,7 +199,7 @@ def create_new_subtask_with_more_than_250_characters(context, subtask="", duedat
 
     except:
         context.driver.close()
-        assert False, "Test is failed when tried to write a new subtask with more than 250 characters."
+        assert False, "Test is failed when tried create a empty subtask."
 
 
 @then(u'Close the browser')
