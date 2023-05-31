@@ -32,7 +32,7 @@ class MyTaskPage(BasePage):
         list = self.get_elements(self.LIST_TASK)
         assert self.get_element_text(list[0]) == task
 
-    def check_if_exist_task_and_add_sub_Task(self, task="task to add sub task"):
+    def check_if_exist_task_and_add_sub_task(self, task="task to add sub task"):
         list_of_tasks = self.get_elements(self.LIST_TASK)
         if len(list_of_tasks) == 0:
             self.input_element(self.TXT_NEW_TASK, task)
@@ -44,7 +44,6 @@ class MyTaskPage(BasePage):
         self.click_element(self.ADD_SUBTASK)
 
     def check_number_of_sub_tasks(self):
-        print("tratando de obtener el texto")
         subtask = self.get_element_text(self.ADD_SUBTASK)
         nums = [int(match.group(1)) for match in re.finditer(r"\((\d+)\)", subtask)]
         self.click_element(self.ADD_SUBTASK)

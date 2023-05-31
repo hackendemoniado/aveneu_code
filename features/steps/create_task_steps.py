@@ -137,7 +137,7 @@ def enter_on_subtask(context):
     try:
         context.loginPage.enter_on_my_task()
         context.mytaskpage.validate_page()
-        context.mytaskpage.check_if_exist_task_and_add_sub_Task()
+        context.mytaskpage.check_if_exist_task_and_add_sub_task()
         context.subtaskpage.validate_page()
     except:
         context.driver.close()
@@ -149,7 +149,7 @@ def check_number_of_sub_tasks(context, subtask, duedate):
     try:
         context.loginPage.enter_on_my_task()
         context.mytaskpage.validate_page()
-        context.mytaskpage.check_if_exist_task_and_add_sub_Task()
+        context.mytaskpage.check_if_exist_task_and_add_sub_task()
         context.subtaskpage.validate_page()
         context.subtaskpage.create_sub_task(subtask, duedate)
         number_of_subtasks = context.mytaskpage.check_number_of_sub_tasks()
