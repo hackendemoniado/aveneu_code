@@ -7,6 +7,7 @@ So I can manage my tasks
     When Open the https://qa-test.avenuecode.io/users/sign_in website
     Then The login portal has been opened
 
+    #Here started the task Scenario
   Scenario: It is possible to create tasks by pressing Enter.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
@@ -33,14 +34,14 @@ So I can manage my tasks
     And Click on the Login button
     Then Login is successful and dashboard is opened
     Then Click on the My Tasks button
-    Then Click and write in the text_box the new Task "1"
+    Then Click and write in the text_box the new Task and press enter "1"
 
   Scenario: The maximum of 250 characters is not respected when the task is created.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
     Then Login is successful and dashboard is opened
     Then Click on the My Tasks button
-    Then Click and write in the text_box the new Task "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium q"
+    Then Click and write in the text_box the new Task and press enter "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium q"
 
   Scenario: When added, the task should be appended on TOP of the list of created tasks.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
@@ -48,7 +49,9 @@ So I can manage my tasks
     Then Login is successful and dashboard is opened
     Then Click on the My Tasks button
     Then Click and write in the text_box the new Task "2" and check If appear on the top of list
+    #Here finished the task Scenario
 
+    #Here started the subtask Scenario
   Scenario: Create a task If dooes not exist and after that click on Manage Subtasks.
     And Provide the username "sergiosysforence@hotmail.com.ar" and password "Qualityassurance"
     And Click on the Login button
